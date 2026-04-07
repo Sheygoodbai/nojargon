@@ -1,12 +1,12 @@
 {
-  "id": "plainclaw",
-  "name": "PlainClaw",
-  "description": "Makes OpenClaw reply in short, plain language. Removes jargon, consultant phrasing, unexplained acronyms, and workplace buzzwords while keeping the user's language and tone.",
+  "id": "nojargon",
+  "name": "说人话 NoJargon",
+  "description": "Makes OpenClaw replies easier to understand before they reach the user. Removes jargon, unexplained acronyms, and workplace buzzwords, keeps the user's tone, and rewrites locally with instant on/off control.",
   "skills": [
     "./skills"
   ],
   "bundledSkills": [
-    "plainclaw"
+    "nojargon"
   ],
   "configSchema": {
     "type": "object",
@@ -50,7 +50,7 @@
   "uiHints": {
     "enabled": {
       "label": "Enabled",
-      "help": "Master switch for PlainClaw."
+        "help": "Master switch for 说人话 NoJargon."
     },
     "mode": {
       "label": "Rewrite mode",
@@ -62,7 +62,7 @@
     },
     "jargonSensitivity": {
       "label": "Jargon sensitivity",
-      "help": "How aggressively PlainClaw treats technical jargon and workplace buzzwords as rewrite targets."
+        "help": "How aggressively 说人话 NoJargon treats technical jargon and workplace buzzwords as rewrite targets."
     },
     "shortenOutput": {
       "label": "Shorten output",
@@ -70,8 +70,7 @@
     },
     "trackStats": {
       "label": "Track local stats",
-      "help": "Keep local rewrite counters in memory for /plainclaw status. No chat content is uploaded anywhere."
+        "help": "Keep local rewrite counters in memory for /nojargon status. No chat content is uploaded anywhere."
     }
   }
 }
-

@@ -1,8 +1,8 @@
 {
-  "name": "@sheygoodbai/openclaw-plainclaw",
-  "displayName": "PlainClaw",
-  "version": "0.1.3",
-  "description": "OpenClaw plugin that turns jargon-heavy agent replies into short plain language, strips corporate speak, keeps uncertainty honest, matches the user's tone, and adds instant on/off controls without uploading local conversation data to any plugin database.",
+  "name": "@sheygoodbai/openclaw-nojargon",
+  "displayName": "说人话 NoJargon",
+  "version": "0.2.0",
+  "description": "OpenClaw plugin that rewrites jargon-heavy AI output into short plain language before delivery. It removes consultant phrasing, workplace buzzwords, and unexplained technical terms, matches the user's tone, and works locally without extra model calls or local data upload.",
   "scripts": {
     "test": "node --test tests/*.test.js",
     "check": "node --check src/index.js && node --test tests/*.test.js"
@@ -10,8 +10,9 @@
   "keywords": [
     "openclaw",
     "clawhub",
-    "plainclaw",
+    "nojargon",
     "plain language",
+    "no jargon",
     "jargon remover",
     "buzzword filter",
     "corporate speak",
@@ -21,14 +22,14 @@
     "职场黑话",
     "openclaw plugin"
   ],
-  "homepage": "https://github.com/Sheygoodbai/plainclaw",
+  "homepage": "https://clawhub.ai/plugins/openclaw-nojargon",
   "bugs": {
-    "url": "https://github.com/Sheygoodbai/plainclaw/issues"
+    "url": "https://github.com/Sheygoodbai/nojargon/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sheygoodbai/plainclaw.git"
+    "url": "git+https://github.com/Sheygoodbai/nojargon.git"
   },
   "type": "module",
   "openclaw": {

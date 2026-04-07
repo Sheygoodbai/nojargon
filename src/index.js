@@ -5,6 +5,7 @@ import {
   collectAssistantTexts,
   createRecentlyRewrittenCache,
   DEFAULT_SETTINGS,
+  DISPLAY_NAME,
   ensurePluginConfigEntry,
   extractLatestUserMessageText,
   formatHelp,
@@ -13,7 +14,7 @@ import {
   PLUGIN_ID,
   rewriteAssistantMessage,
   rewriteOutgoingContent,
-} from "./plainclaw-core.js";
+} from "./nojargon-core.js";
 
 export default function register(api) {
   let liveOverrides = normalizeSettings(api?.pluginConfig);
@@ -52,8 +53,8 @@ export default function register(api) {
   }
 
   api.registerCommand({
-    name: "plainclaw",
-    description: "Turn PlainClaw on/off or switch rewrite mode",
+    name: "nojargon",
+    description: "Turn 说人话 NoJargon on/off or switch rewrite mode",
     acceptsArgs: true,
     async handler(ctx) {
       const args = typeof ctx.args === "string" ? ctx.args.trim().toLowerCase() : "";
@@ -65,15 +66,15 @@ export default function register(api) {
       }
       if (args === "on") {
         const settings = await persistOverrides({ enabled: true });
-        return { text: `PlainClaw is on.\nMode: ${settings.mode}` };
+        return { text: `${DISPLAY_NAME} is on.\nMode: ${settings.mode}` };
       }
       if (args === "off") {
         const settings = await persistOverrides({ enabled: false });
-        return { text: `PlainClaw is off.\nMode: ${settings.mode}` };
+        return { text: `${DISPLAY_NAME} is off.\nMode: ${settings.mode}` };
       }
       if (args === "adaptive" || args === "always") {
         const settings = await persistOverrides({ enabled: true, mode: args });
-        return { text: `PlainClaw is on.\nMode: ${settings.mode}` };
+        return { text: `${DISPLAY_NAME} is on.\nMode: ${settings.mode}` };
       }
       return { text: formatHelp() };
     },

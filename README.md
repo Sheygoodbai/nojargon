@@ -1,63 +1,57 @@
-# PlainClaw
+# 说人话 NoJargon
 
-PlainClaw is an OpenClaw plugin that forces jargon-heavy agent replies back into
-short, plain language.
+说人话 NoJargon is an OpenClaw plugin that rewrites jargon-heavy AI replies
+into short, plain language before they reach the user.
 
-It is the opposite of a "Humanizer" surface that tries to make AI sound more
-impressive. PlainClaw strips consultant tone, workplace buzzwords, and
-unexplained technical terms so users get the point in human words instead of
-being dazzled by fluff.
+It is built for users who want clarity instead of polished fog. 说人话
+NoJargon strips consultant phrasing, workplace buzzwords, and unexplained
+technical terms so the answer is easier to trust, easier to scan, and harder to
+use as smoke and mirrors.
+
+Canonical install page:
+
+- `https://clawhub.ai/plugins/openclaw-nojargon`
 
 ## Why it is different
 
-Most adjacent tools fall into one of three buckets:
-
-- browser extensions that explain selected text after you highlight and send it
-  somewhere else
-- humanizer tools that make AI output sound more polished or more human
-- generic simplifiers that do not live inside the OpenClaw reply path
-
-PlainClaw is different on purpose:
-
 - OpenClaw-native: it works inside the reply pipeline instead of as copy/paste
-- anti-buzzword: it removes fog instead of adding more style
-- privacy-first: it rewrites locally and does not upload local chat content to a
-  plugin database
-- confidence-aware: it pushes the model away from fake certainty and inflated
-  phrasing before the text is sent
-- bilingual: it ships with both English and Chinese rewrite rules out of the box
+- local-first: the final rewrite is deterministic and does not call another model
+- privacy-first: it does not upload local chat content to any plugin database
+- confidence-aware: it pushes replies away from fake certainty and inflated phrasing
+- tone-aware: it stays closer to the user's language and rough tone
+- bilingual: it ships with English and Chinese rewrite rules out of the box
 
 ## What it does
 
 - pushes the model toward plain, concise wording before generation
 - rewrites final replies locally before they are written and sent
-- matches the user's language and rough tone instead of sounding like generic AI
-- supports instant `/plainclaw on|off|status|adaptive|always` commands
-- does not upload local conversation data to any plugin database
+- removes jargon, consultant phrasing, and unexplained acronyms
+- keeps the user's language and rough tone instead of sounding like generic AI
+- supports instant `/nojargon on|off|status|adaptive|always` controls
 
 ## Install
 
 ```bash
-openclaw plugins install clawhub:@sheygoodbai/openclaw-plainclaw
-openclaw plugins enable plainclaw
+openclaw plugins install clawhub:@sheygoodbai/openclaw-nojargon
+openclaw plugins enable nojargon
 ```
 
 Then turn rewriting on in chat:
 
 ```text
-/plainclaw adaptive
+/nojargon adaptive
 ```
 
-`openclaw plugins enable plainclaw` only loads the plugin. The actual rewrite
-switch stays off until you run `/plainclaw on` or `/plainclaw adaptive`.
+`openclaw plugins enable nojargon` only loads the plugin. The actual rewrite
+switch stays off until you run `/nojargon on` or `/nojargon adaptive`.
 
 If ClawHub returns `429 Rate limit exceeded`, use the source fallback:
 
 ```bash
-git clone https://github.com/Sheygoodbai/plainclaw.git
-cd plainclaw
+git clone https://github.com/Sheygoodbai/nojargon.git
+cd nojargon
 openclaw plugins install -l .
-openclaw plugins enable plainclaw
+openclaw plugins enable nojargon
 ```
 
 If the plugin does not show up immediately in `openclaw plugins list`, restart
@@ -65,12 +59,12 @@ the gateway once after install or enable.
 
 ## Commands
 
-- `/plainclaw on`
-- `/plainclaw off`
-- `/plainclaw adaptive`
-- `/plainclaw always`
-- `/plainclaw status`
-- `/plainclaw help`
+- `/nojargon on`
+- `/nojargon off`
+- `/nojargon adaptive`
+- `/nojargon always`
+- `/nojargon status`
+- `/nojargon help`
 
 ## Config
 
@@ -78,7 +72,7 @@ the gateway once after install or enable.
 {
   "plugins": {
     "entries": {
-      "plainclaw": {
+      "nojargon": {
         "config": {
           "enabled": true,
           "mode": "adaptive",
@@ -95,13 +89,12 @@ the gateway once after install or enable.
 
 ## Token note
 
-PlainClaw reduces wasted output in the cheapest way OpenClaw currently allows:
+说人话 NoJargon reduces wasted output in the cheapest way OpenClaw currently
+allows:
 
-- it tells the model up front to answer in plain language, which can reduce
-  output tokens at the source
-- it also trims and rewrites the final reply locally without calling another
-  model
+- it tells the model up front to answer in plain language, which can reduce output tokens at the source
+- it also trims and rewrites the final reply locally without calling another model
 
-It cannot retroactively refund tokens that the upstream model already generated.
-It is designed to minimize waste, not pretend the platform supports impossible
-refunds.
+It cannot retroactively refund tokens that the upstream model already
+generated. It is designed to minimize waste, not pretend the platform supports
+impossible refunds.

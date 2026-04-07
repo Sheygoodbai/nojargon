@@ -6,7 +6,7 @@ import {
   createRecentlyRewrittenCache,
   normalizeSettings,
   rewriteOutgoingContent,
-} from "../src/plainclaw-core.js";
+} from "../src/nojargon-core.js";
 
 test("balanced mode rewrites obvious corporate jargon", () => {
   const settings = normalizeSettings({ enabled: true, mode: "adaptive", jargonSensitivity: "balanced" });

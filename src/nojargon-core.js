@@ -1,4 +1,5 @@
-export const PLUGIN_ID = "plainclaw";
+export const PLUGIN_ID = "nojargon";
+export const DISPLAY_NAME = "说人话 NoJargon";
 
 export const DEFAULT_SETTINGS = Object.freeze({
   enabled: false,
@@ -199,7 +200,7 @@ function detectRequestedDepth(text) {
 
 export function buildStaticPromptGuidance(settings) {
   const lines = [
-    "PlainClaw is enabled for this conversation.",
+    "NoJargon is enabled for this conversation.",
     "Reply in plain language first.",
     "Avoid consultant phrasing, workplace buzzwords, and unexplained acronyms.",
     "If a technical term is necessary, explain it in everyday words the first time you use it.",
@@ -423,7 +424,7 @@ export function createRecentlyRewrittenCache(ttlMs = 60_000) {
 
 export function formatStatus(settings, stats) {
   return [
-    `PlainClaw: ${settings.enabled ? "on" : "off"}`,
+    `${DISPLAY_NAME}: ${settings.enabled ? "on" : "off"}`,
     `Mode: ${settings.mode}`,
     `Tone match: ${settings.toneMatch ? "on" : "off"}`,
     `Jargon sensitivity: ${settings.jargonSensitivity}`,
@@ -438,13 +439,13 @@ export function formatStatus(settings, stats) {
 
 export function formatHelp() {
   return [
-    "PlainClaw commands:",
-    "/plainclaw on",
-    "/plainclaw off",
-    "/plainclaw adaptive",
-    "/plainclaw always",
-    "/plainclaw status",
-    "/plainclaw help",
+    `${DISPLAY_NAME} commands:`,
+    "/nojargon on",
+    "/nojargon off",
+    "/nojargon adaptive",
+    "/nojargon always",
+    "/nojargon status",
+    "/nojargon help",
   ].join("\n");
 }
 

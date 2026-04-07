@@ -1,17 +1,17 @@
 ---
-name: plainclaw
-version: 0.1.3
-description: "PlainClaw makes OpenClaw replies easier to understand. Use when the user wants AI answers in plain language, shorter wording, fewer buzzwords, fewer unexplained technical terms, less corporate speak, or more 人话."
-tags: [plainclaw, openclaw, clawhub, plain-language, 人话, 术语翻译, 职场黑话, jargon-removal]
-source: Sheygoodbai/plainclaw
-trigger: "PlainClaw"
+name: nojargon
+version: 0.2.0
+description: "说人话 NoJargon makes OpenClaw replies easier to understand. Use when the user wants plain language, shorter wording, fewer buzzwords, fewer unexplained technical terms, or more 人话."
+tags: [nojargon, openclaw, clawhub, plain-language, no-jargon, 人话, 术语翻译, 职场黑话, jargon-removal]
+source: Sheygoodbai/nojargon
+trigger: "NoJargon"
 metadata:
   openclaw:
     emoji: "🗣️"
-    homepage: "https://github.com/Sheygoodbai/plainclaw"
+    homepage: "https://clawhub.ai/plugins/openclaw-nojargon"
 ---
 
-# PlainClaw
+# 说人话 NoJargon
 
 Use this skill when the user wants OpenClaw to:
 
@@ -21,29 +21,29 @@ Use this skill when the user wants OpenClaw to:
 - explain technical terms in normal words
 - stay concise without losing the main point
 
-## What PlainClaw is
+## What 说人话 NoJargon is
 
-`PlainClaw` is an OpenClaw plugin with a bundled skill.
+`说人话 NoJargon` is an OpenClaw plugin with a bundled skill.
 
 It is designed to keep agent output understandable, short, and hard to use as
 smoke and mirrors.
 
 ## Install
 
-- `openclaw plugins install clawhub:@sheygoodbai/openclaw-plainclaw`
-- `openclaw plugins enable plainclaw`
-- `/plainclaw adaptive`
+- `openclaw plugins install clawhub:@sheygoodbai/openclaw-nojargon`
+- `openclaw plugins enable nojargon`
+- `/nojargon adaptive`
 
 If ClawHub returns `429 Rate limit exceeded`, clone the repo and install with
 `openclaw plugins install -l .` instead.
 
 ## Quick controls
 
-- `/plainclaw on`
-- `/plainclaw off`
-- `/plainclaw adaptive`
-- `/plainclaw always`
-- `/plainclaw status`
+- `/nojargon on`
+- `/nojargon off`
+- `/nojargon adaptive`
+- `/nojargon always`
+- `/nojargon status`
 
 ## Rules
 
