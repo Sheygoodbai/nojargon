@@ -1,8 +1,12 @@
 {
   "name": "@sheygoodbai/openclaw-plainclaw",
   "displayName": "PlainClaw",
-  "version": "0.1.0",
-  "description": "OpenClaw plugin that turns jargon-heavy agent replies into short plain language, strips corporate speak, matches the user's tone, and adds instant on/off controls without uploading local conversation data to any plugin database.",
+  "version": "0.1.1",
+  "description": "OpenClaw plugin that turns jargon-heavy agent replies into short plain language, strips corporate speak, keeps uncertainty honest, matches the user's tone, and adds instant on/off controls without uploading local conversation data to any plugin database.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/index.js && node --test tests/*.test.js"
+  },
   "keywords": [
     "openclaw",
     "clawhub",
@@ -41,4 +45,3 @@
     }
   }
 }
-

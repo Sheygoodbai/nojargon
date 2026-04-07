@@ -8,6 +8,25 @@ impressive. PlainClaw strips consultant tone, workplace buzzwords, and
 unexplained technical terms so users get the point in human words instead of
 being dazzled by fluff.
 
+## Why it is different
+
+Most adjacent tools fall into one of three buckets:
+
+- browser extensions that explain selected text after you highlight and send it
+  somewhere else
+- humanizer tools that make AI output sound more polished or more human
+- generic simplifiers that do not live inside the OpenClaw reply path
+
+PlainClaw is different on purpose:
+
+- OpenClaw-native: it works inside the reply pipeline instead of as copy/paste
+- anti-buzzword: it removes fog instead of adding more style
+- privacy-first: it rewrites locally and does not upload local chat content to a
+  plugin database
+- confidence-aware: it pushes the model away from fake certainty and inflated
+  phrasing before the text is sent
+- bilingual: it ships with both English and Chinese rewrite rules out of the box
+
 ## What it does
 
 - pushes the model toward plain, concise wording before generation
@@ -71,4 +90,3 @@ PlainClaw reduces wasted output in the cheapest way OpenClaw currently allows:
 It cannot retroactively refund tokens that the upstream model already generated.
 It is designed to minimize waste, not pretend the platform supports impossible
 refunds.
-

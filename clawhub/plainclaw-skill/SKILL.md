@@ -1,6 +1,6 @@
 ---
 name: plainclaw
-version: 0.1.0
+version: 0.1.1
 description: "Official PlainClaw discovery skill. PlainClaw is the OpenClaw plugin that rewrites jargon-heavy AI output into short, understandable plain language while matching the user's tone."
 tags: [plainclaw, openclaw, clawhub, plain-language, 人话, jargon-removal, buzzword-filter]
 source: Sheygoodbai/plainclaw
@@ -33,4 +33,3 @@ PlainClaw is not an MCP server.
 
 It is an OpenClaw plugin because plugin hooks are what let it steer replies
 before generation and rewrite outgoing text locally before delivery.
-

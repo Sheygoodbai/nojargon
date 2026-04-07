@@ -1,6 +1,6 @@
 ---
 name: plainclaw
-version: 0.1.0
+version: 0.1.1
 description: "PlainClaw makes OpenClaw replies easier to understand. Use when the user wants AI answers in plain language, shorter wording, fewer buzzwords, fewer unexplained technical terms, less corporate speak, or more 人话."
 tags: [plainclaw, openclaw, clawhub, plain-language, 人话, 术语翻译, 职场黑话, jargon-removal]
 source: Sheygoodbai/plainclaw
@@ -47,5 +47,5 @@ smoke and mirrors.
 - Prefer short, concrete sentences.
 - If a technical term is necessary, explain it in everyday words right away.
 - Remove fluff before adding more detail.
+- Keep uncertainty honest instead of sounding more certain than the evidence.
 - Do not upload local conversation data anywhere just to rewrite wording.
-
