@@ -1,0 +1,77 @@
+{
+  "id": "plainclaw",
+  "name": "PlainClaw",
+  "description": "Makes OpenClaw reply in short, plain language. Removes jargon, consultant phrasing, unexplained acronyms, and workplace buzzwords while keeping the user's language and tone.",
+  "skills": [
+    "./skills"
+  ],
+  "bundledSkills": [
+    "plainclaw"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": false
+      },
+      "mode": {
+        "type": "string",
+        "enum": [
+          "adaptive",
+          "always"
+        ],
+        "default": "adaptive"
+      },
+      "toneMatch": {
+        "type": "boolean",
+        "default": true
+      },
+      "jargonSensitivity": {
+        "type": "string",
+        "enum": [
+          "light",
+          "balanced",
+          "aggressive"
+        ],
+        "default": "balanced"
+      },
+      "shortenOutput": {
+        "type": "boolean",
+        "default": true
+      },
+      "trackStats": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Enabled",
+      "help": "Master switch for PlainClaw."
+    },
+    "mode": {
+      "label": "Rewrite mode",
+      "help": "Adaptive only rewrites jargon-heavy replies. Always rewrites every normal reply."
+    },
+    "toneMatch": {
+      "label": "Match user tone",
+      "help": "Keep the user's language and rough tone instead of sounding generic."
+    },
+    "jargonSensitivity": {
+      "label": "Jargon sensitivity",
+      "help": "How aggressively PlainClaw treats technical jargon and workplace buzzwords as rewrite targets."
+    },
+    "shortenOutput": {
+      "label": "Shorten output",
+      "help": "Remove filler, throat-clearing, and repeated caveats."
+    },
+    "trackStats": {
+      "label": "Track local stats",
+      "help": "Keep local rewrite counters in memory for /plainclaw status. No chat content is uploaded anywhere."
+    }
+  }
+}
+

@@ -1,0 +1,44 @@
+{
+  "name": "@sheygoodbai/openclaw-plainclaw",
+  "displayName": "PlainClaw",
+  "version": "0.1.0",
+  "description": "OpenClaw plugin that turns jargon-heavy agent replies into short plain language, strips corporate speak, matches the user's tone, and adds instant on/off controls without uploading local conversation data to any plugin database.",
+  "keywords": [
+    "openclaw",
+    "clawhub",
+    "plainclaw",
+    "plain language",
+    "jargon remover",
+    "buzzword filter",
+    "corporate speak",
+    "human words",
+    "人话",
+    "术语翻译",
+    "职场黑话",
+    "openclaw plugin"
+  ],
+  "homepage": "https://github.com/Sheygoodbai/plainclaw",
+  "bugs": {
+    "url": "https://github.com/Sheygoodbai/plainclaw/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sheygoodbai/plainclaw.git"
+  },
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./src/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.3.24",
+      "minGatewayVersion": "2026.3.24"
+    },
+    "build": {
+      "openclawVersion": "2026.4.2",
+      "pluginSdkVersion": "2026.4.2"
+    }
+  }
+}
+
