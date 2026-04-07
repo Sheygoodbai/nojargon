@@ -11,7 +11,7 @@ export const DEFAULT_SETTINGS = Object.freeze({
 
 const SENSITIVITY_THRESHOLDS = Object.freeze({
   light: 5,
-  balanced: 3,
+  balanced: 2,
   aggressive: 1,
 });
 

@@ -21,6 +21,16 @@ test("balanced mode rewrites obvious corporate jargon", () => {
   assert.doesNotMatch(output.content, /\bapproachs\b/i);
 });
 
+test("balanced mode still catches short black-box phrasing", () => {
+  const settings = normalizeSettings({ enabled: true, mode: "adaptive", jargonSensitivity: "balanced" });
+  const input = "We should leverage best practices.";
+  const output = rewriteOutgoingContent(input, settings);
+
+  assert.equal(output.changed, true);
+  assert.doesNotMatch(output.content, /\bleverage\b/i);
+  assert.doesNotMatch(output.content, /\bbest practices\b/i);
+});
+
 test("code fences stay untouched", () => {
   const settings = normalizeSettings({ enabled: true, mode: "always" });
   const input = [

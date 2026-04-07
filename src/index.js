@@ -51,8 +51,6 @@ export default function register(api) {
     return liveOverrides;
   }
 
-  api.logger.info("plainclaw: loaded plain-language output filter and command surface");
-
   api.registerCommand({
     name: "plainclaw",
     description: "Turn PlainClaw on/off or switch rewrite mode",
@@ -143,9 +141,9 @@ export default function register(api) {
         return undefined;
       }
       recentlyRewritten.remember(rewritten.content);
+      recordSavings(rewritten.charsRemoved);
       return { content: rewritten.content };
     },
     { priority: 70 },
   );
 }
-

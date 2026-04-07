@@ -42,13 +42,16 @@ openclaw plugins install clawhub:@sheygoodbai/openclaw-plainclaw
 openclaw plugins enable plainclaw
 ```
 
-Then turn it on in chat:
+Then turn rewriting on in chat:
 
 ```text
 /plainclaw adaptive
 ```
 
-If ClawHub is temporarily rate-limited, use the source fallback:
+`openclaw plugins enable plainclaw` only loads the plugin. The actual rewrite
+switch stays off until you run `/plainclaw on` or `/plainclaw adaptive`.
+
+If ClawHub returns `429 Rate limit exceeded`, use the source fallback:
 
 ```bash
 git clone https://github.com/Sheygoodbai/plainclaw.git

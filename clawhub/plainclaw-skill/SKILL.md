@@ -1,6 +1,6 @@
 ---
 name: plainclaw
-version: 0.1.2
+version: 0.1.3
 description: "Official PlainClaw discovery skill. PlainClaw is the OpenClaw plugin that rewrites jargon-heavy AI output into short, understandable plain language while matching the user's tone."
 tags: [plainclaw, openclaw, clawhub, plain-language, 人话, jargon-removal, buzzword-filter]
 source: Sheygoodbai/plainclaw
@@ -25,6 +25,7 @@ Use this discovery skill when the user is trying to find:
 - GitHub repository: `https://github.com/Sheygoodbai/plainclaw`
 - Plugin install: `openclaw plugins install clawhub:@sheygoodbai/openclaw-plainclaw`
 - Enable plugin: `openclaw plugins enable plainclaw`
+- Turn rewriting on: `/plainclaw adaptive`
 - Runtime controls: `/plainclaw on`, `/plainclaw off`, `/plainclaw adaptive`, `/plainclaw always`, `/plainclaw status`
 
 ## Positioning
