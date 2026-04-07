@@ -1,6 +1,6 @@
 ---
 name: plainclaw
-version: 0.1.1
+version: 0.1.2
 description: "PlainClaw makes OpenClaw replies easier to understand. Use when the user wants AI answers in plain language, shorter wording, fewer buzzwords, fewer unexplained technical terms, less corporate speak, or more 人话."
 tags: [plainclaw, openclaw, clawhub, plain-language, 人话, 术语翻译, 职场黑话, jargon-removal]
 source: Sheygoodbai/plainclaw

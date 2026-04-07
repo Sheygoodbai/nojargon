@@ -48,6 +48,18 @@ Then turn it on in chat:
 /plainclaw adaptive
 ```
 
+If ClawHub is temporarily rate-limited, use the source fallback:
+
+```bash
+git clone https://github.com/Sheygoodbai/plainclaw.git
+cd plainclaw
+openclaw plugins install -l .
+openclaw plugins enable plainclaw
+```
+
+If the plugin does not show up immediately in `openclaw plugins list`, restart
+the gateway once after install or enable.
+
 ## Commands
 
 - `/plainclaw on`

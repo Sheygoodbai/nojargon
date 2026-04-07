@@ -18,6 +18,7 @@ test("balanced mode rewrites obvious corporate jargon", () => {
   assert.match(output.content, /use/i);
   assert.doesNotMatch(output.content, /\bleverage\b/i);
   assert.doesNotMatch(output.content, /\bstakeholders\b/i);
+  assert.doesNotMatch(output.content, /\bapproachs\b/i);
 });
 
 test("code fences stay untouched", () => {
